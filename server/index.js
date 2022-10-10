@@ -1,11 +1,12 @@
 console.clear();
-require('dotenv').config();
-Express = require('express');
+import * as dotenv from 'dotenv';
+import Express from 'express';
 
-const serverExpress = Express();
+dotenv.config()
+const app = Express();
 
-serverExpress.use(Express.static('../public'))
+app.use(Express.static('../public'))
 
-serverExpress.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT,()=>{
 console.log(`server runing in the port ${process.env.PORT}`)
 });
