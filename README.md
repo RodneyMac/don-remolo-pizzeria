@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+PROYECTO: PIZZERÍA DON REMOLO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Menú de comidas para realizar pedidos online. Gestor de pedidos para el local. #idea3
 
-## Available Scripts
+Descripción del proyecto:
 
-In the project directory, you can run:
+Se requiere un menú intuitivo y simple de usar para realizar pedidos vía whatsapp.
 
-### `npm start`
+Objetivo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El usuario final debe poder armar su pedido online con todos los ítems agregados, conocer su total, y recibir confirmación del local.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Requisitos:
 
-### `npm test`
+-Los usuarios no necesitan estar registrados. -Se debe poder visualizar el listado de comidas ofrecidas separadas en categorías: Pizzas, Empanadas, Bebidas, Postres. -El usuario debe poder agregar X cantidad de cada item en su pedido. -El pedido puede realizar su checkout sin pago ni envío de por medio. Se debe aclarar que es sólo en efectivo y con delivery propio del negocio. -En el checkout se crea un texto automático que se envía al whatsapp del local.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Páginas a desarrollar:
 
-### `npm run build`
+-Listado de comidas -Vista del pedido -Confirmación del pedido
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+TRABAJO PARA UX: Research y prototipado.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+TRABAJO PARA DISEÑO/UI: Diseñar cada página.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+TRABAJO PARA FRONTEND: Maquetación de cada página.
 
-### `npm run eject`
+TRABAJO PARA BACKEND: Creación de la base de datos. Creación de la lógica y control de los datos. (API o con motor de plantillas)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+TRABAJO PARA QA/TESTING: Crear tests para validar los errores en cada página.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+TRABAJO PARA DEVOPS: Crear un deploy para 3 ambientes: Dev, Staging y Production. Al terminar:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Suma el proyecto a tu portfolio. Comparte tu trabajo y ayuda a otros a sumar tu aporte utilizando el hashtag #idea3 Cuenta tu experiencia en las redes para demostrar tus logros
