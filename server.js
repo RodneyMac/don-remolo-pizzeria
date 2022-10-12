@@ -16,12 +16,12 @@ app.use(morgan('dev'));
 
 //routers
 app.use('/order',taskRouter);
-app.use(Express.static('./public')));
+app.use(Express.static('./public'));
 
 
 //starting server
 async function bootstraps() {
-    await mongoose.connect(process.env.URI);
+    //await mongoose.connect(process.env.URI);
 
     app.listen(PORT, () => {
         console.log(`estoy en el puerto ${PORT} ta todo flama rey`);
