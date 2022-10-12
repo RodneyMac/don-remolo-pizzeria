@@ -3,10 +3,9 @@ import * as dotenv from 'dotenv';
 import Express from 'express';
 import taskRouter from './server/routers/task.routers.js';
 import morgan from 'morgan';
-import {path} from 'path';
 
 //initialize server
-PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 dotenv.config();
 const app = Express();
@@ -17,7 +16,7 @@ app.use(morgan('dev'));
 
 //routers
 app.use('/order',taskRouter);
-app.use(Express.static(path.join(__dirname + 'public')));
+app.use(Express.static('./public')));
 
 
 //starting server
