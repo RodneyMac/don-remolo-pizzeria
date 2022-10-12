@@ -1,32 +1,14 @@
 console.clear();
-import * as dotenv from 'dotenv';
-import Express from 'express';
-import taskRouter from './server/routers/task.routers.js';
-import morgan from 'morgan';
+import connectDB from './server/config/db.js';
+import './server/config/env.js';
+import httpServer from './server/config/http.js';
 
-//initialize server
-const PORT = process.env.PORT || 3000
+const bootstrap = async () => {
+    await connectDB(process.env.URI);
 
-dotenv.config();
-const app = Express();
-
-//Middlewares
-app.use(Express.json());
-app.use(morgan('dev'));
-
-//routers
-app.use('/order',taskRouter);
-app.use(Express.static('./public'));
-
-
-//starting server
-async function bootstraps() {
-    //await mongoose.connect(process.env.URI);
-
-    app.listen(PORT, () => {
-        console.log(`estoy en el puerto ${PORT} ta todo flama rey`);
-
+    httpServer.listen(process.env.PORT, () => {
+        console.log(`Servidor escuchando en el puerto ${process.env.PORT}`);
     });
-}
+};
 
-bootstraps();
+bootstrap();
