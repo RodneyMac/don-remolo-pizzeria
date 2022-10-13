@@ -1,6 +1,6 @@
-import schemaOrder from '../schemas/orderSchema.js';
 import express from 'express';
 import morgan from 'morgan';
+import orderRouter from '../routers/order.routers.js';
 
 const App = express();
 
@@ -10,7 +10,7 @@ App.use(morgan('dev'));
 
 
 // Routes
-App.use('/order', schemaOrder);
+App.use('/order', orderRouter);
 App.use(express.static('.../public'));
 
 export default App;

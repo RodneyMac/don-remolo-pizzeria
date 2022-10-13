@@ -7,7 +7,7 @@ const bootstrap = async () => {
     await connectDB(process.env.URI);
 
     httpServer.listen(process.env.PORT, () => {
-        console.log(`Servidor escuchando en el puerto ${process.env.PORT}`);
+        console.log(`Estoy flama en el puerto: ${process.env.PORT}`);
     });
 };
 

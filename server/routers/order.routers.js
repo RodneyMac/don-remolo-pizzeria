@@ -1,7 +1,7 @@
 import { Router } from "express";
-import modelOrder from '../schemas/schemaOrder,js';
+import orderModel from '../schemas/orderSchema.js';
 
-const Order = modelOrder
+const Order = orderModel
 const orderRouter = Router();
 
 // ver el pedido
@@ -19,18 +19,18 @@ orderRouter.get('/:id', async (req, res) => {
 
 // hacer pedido
 
-taskRouter.post('/', async (req, res) => {
-  const {} = req.body;
-  const order = new Order({}); //* definir modelo de orden (task)
-  await order.save();
-  res.sendStatus(201);  // falta mandar error si no se cumple x condicion
-});
+orderRouter.post('/',async(req, res) => {
+    const { orderid, food } = req.body;
+    const order = new Order({ orderid, food }); //* definir modelo de orden 
+    await order.save();
+    res.sendStatus(201); // falta mandar error si no se cumple x condicion
+  });                     ///esto lo voy a hacer en controllers y dto
 
 
 // cancelar pedido
 orderRouter.delete('/:id', async (req, res) => {
   await Order.findByIdAndRemove(req.params.id);
-  res.json({status: 'Task Deleted'});
+  res.json({status: 'order deleted'});
 });
 
 
