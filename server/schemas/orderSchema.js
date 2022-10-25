@@ -2,30 +2,17 @@ import mongoose from 'mongoose';
 
 
 const orderSchema = new mongoose.Schema({
-  __id:{
-    type:String, 
-    require:true, 
-    unique:true, 
-    _id:false
-  },
+ 
   orden:{
       require:true,
       type:Object,
-      default:{
-        food:{
-          type: Array,
-          default: []
-        },
-        extra:{
-          type: Array,
-          default: []
-        },
-        drinks:{
-          type: Array,
-          default: []
-        }
-      }
+      default:{}
   },
+  phone:{
+    type:String,
+    require:true
+  }
+  ,
   address:{
     city:{
         type: String,
@@ -39,15 +26,15 @@ const orderSchema = new mongoose.Schema({
         type: String,
         require: true
       },
-     dto:{
-        type: String,
-        require: true
-      }
+     dto:String
+      
     },
     price:{
       type:Number,
       require:true
     }
+},{
+ timestamps:true
 });
 
 

@@ -1,14 +1,28 @@
 import { Router } from "express";
 import OrderModel from '../schemas/orderSchema.js';
-
+import calculatePrice from "../controllers/caculatePrice.js";
 const orderRouter = Router();
 
-// orderRouter.post();
+orderRouter.post("/", async(req, res) => {
+  const {orden, address, phone} = req.body;
+  try{
+  const finalPrice = calculatePrice({orden});
+  const order = new OrderModel({orden, address,phone ,price:finalPrice});
+  
+  await order.save();
+}catch(err){
+  return res.sendStatus(404);
+}
+  return res.sendStatus(201);
+});
+
 // orderRouter.put();
 // orderRouter.delete();
 
 // orderRouter.get();
 // orderRouter.get();
+
+
 // // ver el pedido
 
 // orderRouter.get('/', async (req, res) => {
@@ -24,12 +38,12 @@ orderRouter.get('/:id', async (req, res) => {
 
 // // hacer pedido
 
-orderRouter.post('/',async(req, res) => {
-    const { __id, orden, address, price } = req.body;
-    const order = new OrderModel({ __id, orden, address, price}); //* definir modelo de orden 
-    await order.save();
-    return res.sendStatus(201); // falta mandar error si no se cumple x condicion
-  });          ///esto lo voy a hacer en controllers y dto
+// orderRouter.post('/',async(req, res) => {
+//     const { __id, orden, address, price } = req.body;
+//     const order = new OrderModel({ __id, orden, address, price});
+//     await order.save();
+//     return res.sendStatus(201); 
+//   });          
 
 
 // cancelar pedido
